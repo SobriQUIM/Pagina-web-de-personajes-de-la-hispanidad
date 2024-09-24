@@ -1,0 +1,123 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(150deg, #FF0000, #ccff00);
+    height: 100vh;
+}
+
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 15px;
+}
+
+.formulario h2{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid gold;
+}
+
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .usuario{
+    margin: 30px 0;
+    position: relative;
+    border-bottom: 3px solid silver;
+}
+
+.usuario input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.usuario label{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    color: gray;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.usuario span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: purple;
+}
+
+.usuario input:focus ~ label,
+.usuario input:focus ~ label{
+    top: -5px;
+    color: purple;
+}
+
+.usuario input:focus ~ span::before,
+usuario input:focus ~ span::before{
+    width: 100%;
+}
+
+input:not(:placeholder-shown) + label{
+    visibility: hidden;
+} 
+
+.recordar{
+    margin: -5px 0 20px 5px;
+    color: blue;
+    cursor: pointer;
+}
+
+.recordar:hover{
+    text-decoration: underline;
+}
+
+input[type = "submit"]{
+    width: 100%;
+    border: 1px solid;
+    border-radius: 25px;
+    background: red;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    height: 50px;
+}
+
+input[type = "submit"]:hover{
+    border-color: red;
+    transition: .5s;
+}
+
+.registro{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.registro a{
+    color: blue;
+    text-decoration: none;
+}
+
+.registro a:hover{
+    text-decoration: underline;
+}
